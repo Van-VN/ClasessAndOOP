@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body,
+      button {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 16px;
+      }
+
+      p {
+        margin: 8px auto;
+      }
+
+      input {
+        border: 0;
+        font-family: "Courier New", Courier, monospace;
+        background-color: rgb(133, 192, 226);
+        font-size: 16px;
+        width: 400px;
+        color: black;
+        outline: none;
+      }
+
+      input:focus {
+        background-color: rgb(90, 156, 194);
+      }
+
+      ::placeholder {
+        color: black;
+      }
+
+      .container {
+        background-color: rgb(133, 192, 226);
+        padding: 10px 40px;
+        display: inline-block;
+        border: 1px solid black;
+        height: 92px;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="laptop.jpg" alt="Laptop" width="92px" style="float: left" />
+    <div class="container">
+      <p style="display: inline-block">Enter a, b, c:</p>
+      <input
+        id="inputNum"
+        style="display: inline-block"
+        type="text"
+        placeholder="Input a,b and c separate with 'Space'"
+      />
+      <button onclick="calc()">&#9166; Enter</button>
+      <p id="result"></p>
+    </div>
+  </body>
+</html>
+<script src="QuadraticEquation.js"></script>

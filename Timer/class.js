@@ -44,9 +44,12 @@ class TimeCounter {
   }
 
   setTimer() {
-    // console.log(document.querySelector("setupPage"));
-    this.minute = document.getElementById("getMin").value;
     this.second = document.getElementById("getSec").value;
+    this.minute = document.getElementById("getMin").value;
+    if (this.minute === 0 || this.minute === null) {
+      document.getElementById("minute").innerHTML = "00";
+    }
+    console.log(this.minute);
     if (this.minute < 0 || this.second < 0 || this.second > 60) {
       alert("Error!");
     } else {
@@ -96,11 +99,9 @@ class TimeCounter {
         } else if (this.minute < 0 && !this.pauseState && this.reverseState) {
           this.reverseState = false;
           this.pauseState = true;
+          document.getElementById("endingPage").classList.add("show");
           let alertTone = new Audio("tone.mp3");
           alertTone.play();
-          setTimeout(() => {
-            location.reload();
-          }, 10000);
         }
       }, 5);
     }
